@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+$blue: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$very-dark-blue: hsl(209, 33%, 12%);
+$font-stack: 'Libre Franklin', sans-serif;;
+
+@mixin flexProperty($prop1, $prop2, $prop3, $prop4) {
+  display: $prop1;
+  align-items: $prop2;
+  justify-content: $prop3;
+  flex-direction: $prop4;
+}
+
+@mixin fontProperty($prop1, $prop2) {
+  font-size: $prop1;
+  font-weight: $prop2;
+}
+
+@mixin textPropperty($prop1, $prop2) {
+  color: $prop1;
+  text-align: $prop2;
+}
