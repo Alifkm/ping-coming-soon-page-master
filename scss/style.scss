@@ -1,2 +1,196 @@
 @import 'config';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: $font-stack;
+  height: 100%;
+}
+
+main {
+  @include flexProperty(flex, center, center, column);
+  min-height: 100%;
+  overflow-y: scroll;
+
+  #section-one {
+    margin: 50px 20px;
+    padding: 0 20px;
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      @include fontProperty(48px, 300);
+      @include textPropperty($gray, center);
+      margin-bottom: 10px;
+
+      span {
+        color: $very-dark-blue;
+        font-weight: 700;
+      }
+    }
+
+    h2 {
+      @include fontProperty(20px, 300);
+      @include textPropperty($very-dark-blue, center);
+      margin-bottom: 30px;
+    }
+
+    form {
+      @include flexProperty(flex, center, space-around, null);
+
+      input {
+        @include fontProperty(16px, 300);
+        border: 1px solid lighten($gray, $amount: 10%);
+        border-radius: 50px;
+        padding: 20px;
+        width: 500px;
+      }
+
+      .error-msg {
+       visibility: hidden;
+      }
+
+      button {
+        align-self: flex-start;
+        background-color: $blue;
+        border: 1px solid $blue;
+        border-radius: 50px;
+        padding: 20px;
+        width: 200px;
+        color: white;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: lighten($blue, 10%);
+        cursor: pointer;
+      }
+
+      input, button {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  #section-two {
+    margin: 50px 20px;
+    img {
+      width: 800px;
+
+    }
+  }
+
+  #section-three {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 20px;
+
+    > div:nth-child(1) {
+      display: flex;
+      margin-bottom: 30px;
+
+      > i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        padding: 15px;
+        margin: 0 5px;
+        border: 1px solid $gray;
+        border-radius: 50%;
+        color: $blue;
+      }
+
+      > i:hover {
+        cursor: pointer;
+        background-color: $blue;
+        color: white;
+      }
+    }
+
+    > div:nth-child(2) {
+      display: flex;
+
+      p {
+        @include textPropperty($gray, center);
+      }
+    }
+
+    
+  }
+
+  @media only screen and(max-width: 820px) {
+    height: 1200px;
+    
+    #section-one {
+      margin-top: 0;
+      h1 {
+        @include fontProperty(28px, 300);
+       
+      }
+
+      h2 {
+        @include fontProperty(16px, 300);
+      }
+
+      form {
+        @include flexProperty(flex, center, center, column);
+
+        div {
+          width: 100%;
+          margin-bottom: 20px;
+          
+          input {
+            width: 100%;
+          }
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+
+    #section-two {
+      img {
+        width: 100%;
+  
+      }
+    }
+
+    #section-three {
+      margin-bottom: 0;
+    }
+  }
+
+  @media only screen and(max-width: 400px) {
+    height: 900px;
+  }
+
+}
+
+::placeholder {
+  color: lighten($gray, $amount: 10%);
+}
+
+.active-error {
+  margin: 5px 0 0 30px;
+  @include fontProperty(12px, 300);
+  @include textPropperty($light-red, null);
+  font-style: italic;
+  visibility: visible;
+}
+
+.email-error {
+  border: 1px solid $light-red !important;
+}

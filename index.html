@@ -8,7 +8,7 @@
   
   <title>Frontend Mentor | Ping coming soon page</title>
 
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -17,20 +17,43 @@
   </style>
 </head>
 <body>
-
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
+  <main>
+    <section id="section-one">
+      <img src="images/logo.svg" alt="logo">
+      <h1>We are launching <span>soon!</span></h1>
+      <h2>Subscribe and get notified</h2>
+      <form id="emailForm">
+        <div>
+          <input type="text" id="email" placeholder="Your email address...">
+          <p class="error-msg active"></p>
+        </div>
+        <button type="submit">Notify Me</button>
+      </form>
+    </section>
+    <section id="section-two">
+      <img src="images/illustration-dashboard.png" alt="illustration-dashboard">
+    </section>
+    <section id="section-three">
+      <div>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div>
+        <p>&copy; Copyright Ping. All rights reserved. </p>
+      </div>
+    </section>
+  
+     
+  </main>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Alifkm">Alif Kahfi</a>.
     </p>
   </footer>
+
+  <script src="https://kit.fontawesome.com/3626f424e9.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
